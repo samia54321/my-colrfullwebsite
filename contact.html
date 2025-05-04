@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nichola creativity-contact page</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.css">
+</head>
+<body>
+   <!-- Slogan -->
+   <div class="slogan"><h4 class="text-dark">✨ Art That Speaks to the Heart! ✨</h4></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nicholas Creativity</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Hero Section -->
+ <section id="home" class="hero py-5">
+
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-lg-6 mb-4 mb-lg-0 animate__animated animate__fadeInLeft">
+        <h1 class="mb-3">Welcome to contact World of Art! 🎨✨</h1>
+        <p>
+          Hi, I'm <strong>Nicholas Creativity</strong>, a passionate illustrator dedicated to turning ideas into vibrant artwork. Whether you're an author, a business, or a dreamer, I'm here to bring your vision to life with creativity, heart, and color.
+        </p>
+      </div>
+
+      <!-- Loading Screen -->
+<div class="loading-screen">
+  <div class="book"></div>
+</div>
+
+
+ <!-- Hero Image (show only on md and lg screens, fully centered) -->
+<div class="col-lg-6 col-md-6 d-none d-md-flex justify-content-center align-items-center animate__animated animate__zoomIn">
+  <img src="heroimg.jpg" alt="Nicholas Art" class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+  
+<!-- form validation and jeolocation -->
+<section id="about" class="about">
+  <div class="container">
+
+    <!-- form validation section -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form id="contactForm" method="POST">
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+          </div>
+
+          <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Please write your message.</div>
+          </div>
+
+          <div class="text-center">
+              <button type="submit" class="btn btn-dark">Send Message</button>
+          </div>
+      </form>
+  </div>
+
+</section>
+
+
+
+
+
+
+   <!-- Footer -->
+<footer class="footer text-white py-4 animate__animated animate__fadeInUp">
+  <div class="container text-center">
+    <div class="mb-2">
+      <span class="me-2">🖌️</span>
+      <strong>Nicholas Creativity</strong> – Art That Speaks to the Heart!
+      <span class="ms-2">🎨</span>
+    </div>
+    <div class="text-center">
+      <p>Email me at:</p>
+      <h5><a class="text-dark" href="mailto:nicholascreativity472@gmail.com">nicholascreativity472@gmail.com</a></h5>
+    </div>
+    <div class="mt-2 small">
+      &copy; 2025 Nicholas Creativity. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+
+ 
+
+<script>
+  const modal = document.getElementById('bookModal1');
+
+  modal.addEventListener('shown.bs.modal', function () {
+    $('#flipbook').turn({
+      width: 800,
+      height: 500,
+      autoCenter: true,
+    });
+  });
+
+  modal.addEventListener('hidden.bs.modal', function () {
+    $('#flipbook').turn('destroy');
+  });
+</script>
+
+  <!-- Loading Screen JS -->
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+
+   
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById('bookModal1');
+
+    modal.addEventListener('shown.bs.modal', function () {
+      $('#flipbook').turn({
+        width: 800,
+        height: 500,
+        autoCenter: true
+      });
+    });
+
+    modal.addEventListener('hidden.bs.modal', function () {
+      $('#flipbook').turn('destroy');
+    });
+  });
+
+ // Form Validation
+ (function() {
+      'use strict'
+      var form = document.getElementById('contactForm');
+      form.addEventListener('submit', function(event) {
+          // If the form is not valid, prevent submission
+          if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+          }
+          // If the form is valid, show the success message
+          if (form.checkValidity()) {
+              event.preventDefault();  // Prevent default form submission
+              alert("Your message has been sent!");
+              form.reset();  // Optionally reset the form after submission
+          }
+          form.classList.add('was-validated');
+      }, false);
+  })();
+
+
+
+
+
+  </script>
+
+   <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jQuery (required by Turn.js) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Turn.js for Flipbook Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
